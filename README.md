@@ -11,7 +11,7 @@ The core problem addressed in this paper is the quest for architectural improvem
 
 ## Overview of GLUs and Variants
 
-GLU:
+**GLU**:
 $$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
 
 Bilinear:
