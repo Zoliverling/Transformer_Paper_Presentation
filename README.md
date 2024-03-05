@@ -1,5 +1,6 @@
 # GLU Variants
 Author: Zheling Zhang
+
 Email: zheling.zhang@vanderbilt.edu
 
 ## Introdcution
