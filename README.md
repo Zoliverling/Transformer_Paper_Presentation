@@ -1,8 +1,11 @@
 # GLU Variants
+Author: Zheling Zhang
+Email: zheling.zhang@vanderbilt.edu
 
 ## Introdcution
 Transformers have become a dominant architecture in the field of natural language processing. However, their capacity for modeling complex dependencies can be limited by the standard feed-forward networks used within. The introduction of GLU variants into the feed-forward layers offers a novel approach to enhancing the model's representational power.
 
-## Structure
-The main idea is to replace the standard feed-forward networks in Transformer layers with a variant of Gated Linear Units (GLUs). These units introduce a gating mechanism over the linear transformation, which allows the model to control the flow of information more effectively.
+## Paper Overview
+The core problem addressed in this paper is the quest for architectural improvements that can lead to better model performance without significatly increasing computational cost or complexity. The approach taken by the author involves integrating GLUs (Gated Linear Units) variants into the transformer architechture. GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
+![alt text](image.png)
 
