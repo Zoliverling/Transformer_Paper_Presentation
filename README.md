@@ -8,7 +8,7 @@ Transformers have become a dominant architecture in the field of natural languag
 ## Paper Overview
 The core problem addressed in this paper is the quest for architectural improvements that can lead to better model performance without significatly increasing computational cost or complexity. The approach taken by the author involves integrating GLUs (Gated Linear Units) variants into the transformer architechture. GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
 
-### Overview of GLUs and Variants
+## Overview of GLUs and Variants
 GLU(x, W, V, b, c) = σ(xW + b) ⊗ (xV + c)
 
 Bilinear(x, W, V, b, c) = (xW + b) ⊗ (xV + c)
