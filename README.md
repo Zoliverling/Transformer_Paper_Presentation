@@ -20,6 +20,22 @@ GEGLU(x, W, V, b, c) = GELU(xW + b) ⊗ (xV + c)
 
 SwiGLU(x, W, V, b, c, β) = Swishβ(xW + b) ⊗ (xV + c)
 
+
+GLU:
+$$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
+
+Bilinear:
+$$\text{Bilinear}(x, W, V, b, c) = (xW + b) \otimes (xV + c)$$
+
+ReGLU:
+$$\text{ReGLU}(x, W, V, b, c) = \max(0, xW + b) \otimes (xV + c)$$
+
+GEGLU:
+$$\text{GEGLU}(x, W, V, b, c) = \text{GELU}(xW + b) \otimes (xV + c)$$
+
+SwiGLU:
+$$\text{SwiGLU}(x, W, V, b, c, \beta) = \text{Swish}_\beta(xW + b) \otimes (xV + c)$$
+
 The additional variations on the transformer feed-forward network layer which use GLU or one of its variants in place of the first linear transformation and the activation function. The bias term is ommited in this paper.
 
 FFNGLU(x, W, V, W2) = (σ(xW) ⊗ xV )W2
