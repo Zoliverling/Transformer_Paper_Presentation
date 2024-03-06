@@ -16,10 +16,11 @@ The core problem addressed in this paper is the quest for architectural improvem
 > Can AI provide reliable self-critique / evaluation? How to improve the robustness and trustworthiness of AI decision making in the training process?
 
 <details>
-  <summary>🤔</summary>
+  <summary>What is GLUs (Gated Linear Units)?</summary>
   
-  * Use **chain-of-thought prompting** to make AI decision making more explicit during training
-  * [Self-consistency](https://arxiv.org/abs/2203.11171) (cf. ensemble classifier)
+GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
+
+  </details><br>
 
 What is Gated Linear Units:
 
