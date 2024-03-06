@@ -86,7 +86,7 @@ Incorporating these models into speech-to-text applications can result in more a
 Shazeer, N. (2020b, February 12). GLU variants improve transformer. arXiv.org. https://arxiv.org/abs/2002.05202
 
 ## Useful links
-Annotated Paper Implemenatation Notebook: https://nn.labml.ai/transformers/glu_variants/simple.html
+Code Demo from labml: https://nn.labml.ai/transformers/glu_variants/simple.html
 
 Original code base: https://arxiv.org/pdf/1910.10683.pdf
 
