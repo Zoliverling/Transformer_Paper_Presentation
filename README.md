@@ -64,8 +64,9 @@ The conclusion statement from the paper suggests that the GLU variants, when int
 Businesses and organizations can utilize these models to better gauge public sentiment from social media posts, reviews, and customer feedback, allowing for more responsive and targeted services.
 </details><br>
 
-**Question Answering Systems**
+
 <details>
+<summary> **Question Answering Systems** </summary>
 Improved language models can lead to more accurate and relevant answers in AI-based customer service bots, virtual assistants, and information retrieval systems.
 </details><br>
 
