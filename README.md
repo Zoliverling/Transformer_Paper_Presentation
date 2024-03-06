@@ -14,11 +14,11 @@ The core problem addressed in this paper is the quest for architectural improvem
 <details>
   <summary>What are GLUs (Gated Linear Units)?</summary>
   
-GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
+Gated Linear Units (GLUs) are elements within neural networks designed to better manage how information flows through the model. At their core, GLUs perform a simple yet effective operation: they take two linear projections of the input data. Before combining these projections, one undergoes a transformation by a sigmoid function, effectively turning it into a gate. This gate then determines how much of the other linear projection’s information should be allowed to pass through. By doing so, GLUs give the network the ability to selectively focus on more relevant pieces of information while disregarding the rest, which can significantly enhance the learning efficiency of the model.
 
   </details><br>
 
-The GLU Variants utilize the similar machanism to control the flow of information with different activation function.
+The GLU Variants utilize the similar machanism to control the flow of information by using different non-linear (or even linear) functions in place of sigmoid.
 
 **GLU**:
 $$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
@@ -57,7 +57,7 @@ $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 
 ## Fine-tuning
 
-fully-trained models are refined on a carefully curated dataset amalgamating the Stanford Question-Answering Dataset (SQuAD) with tasks from the GLUE and SuperGLUE benchmarks to enhance their performance across a spectrum of natural language understanding (NLU) challenges. This fine-tuning process, executed over 131,072 steps at a learning rate of 10^-3 and handling input sequences up to approximately 65,536 tokens in length, employs a dropout rate of 0.1 on various model components as a regularization strategy, following protocols established by Raffel et al., 2019. Notably, the embedding matrices remain unchanged during this phase, focusing the model's learning on the adjustment of higher-layer weights to the specificities of the task, thereby optimizing the model's adaptability and performance on complex NLU tasks.
+In the fine-tuning phase, fully-trained models are refined on a carefully curated dataset amalgamating the Stanford Question-Answering Dataset (SQuAD) with tasks from the GLUE and SuperGLUE benchmarks to enhance their performance across a spectrum of natural language understanding (NLU) challenges. This fine-tuning process, executed over 131,072 steps at a learning rate of 10^-3 and handling input sequences up to approximately 65,536 tokens in length, employs a dropout rate of 0.1 on various model components as a regularization strategy, following protocols established by Raffel et al., 2019. Notably, the embedding matrices remain unchanged during this phase, focusing the model's learning on the adjustment of higher-layer weights to the specificities of the task, thereby optimizing the model's adaptability and performance on complex NLU tasks.
 
 ![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image-1.png)
 
