@@ -60,20 +60,16 @@ $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 The conclusion statement from the paper suggests that the GLU variants, when integrated into Transformer models, yield improved performance on various language understanding tasks. The practical applications of these findings are quite extensive, particularly in the field of Natural Language Processing (NLP), which involves teaching machines to understand, interpret, and generate human language. Here are some practical usages of such improvements:
 
 **Sentiment Analysis**
-<details>
+
 Businesses and organizations can utilize these models to better gauge public sentiment from social media posts, reviews, and customer feedback, allowing for more responsive and targeted services.
-</details><br>
 
+**Question Answering Systems** 
 
-<details>
-<summary> **Question Answering Systems** </summary>
 Improved language models can lead to more accurate and relevant answers in AI-based customer service bots, virtual assistants, and information retrieval systems.
-</details><br>
 
 **Speech Recognition**
-<detials>
+
 Incorporating these models into speech-to-text applications can result in more accurate transcription, which is beneficial for accessibility technology, legal transcriptions, and more.
-</details><br>
 
 ## Citation
 
