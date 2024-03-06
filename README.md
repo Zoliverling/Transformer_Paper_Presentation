@@ -53,7 +53,7 @@ $$\text{FFNGEGLU}(x, W, V, W_2) = (\text{GELU}(xW) \otimes xV)W_2$$
 $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 
 ## Perplexity Result
-![alt text](image.png)
+![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image.png)
 
 ## Fine-tuning
 
@@ -61,9 +61,9 @@ fully-trained models undergo a fine-tuning process on a meticulously constructed
 
 ![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image-1.png)
 
-![alt text](image-2.png)
+![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image-3.png)
 
 ## Pratical Benefits
 
