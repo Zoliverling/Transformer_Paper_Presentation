@@ -7,41 +7,67 @@ Email: zheling.zhang@vanderbilt.edu
 Transformers have become a dominant architecture in the field of natural language processing. However, their capacity for modeling complex dependencies can be limited by the standard feed-forward networks used within. The introduction of GLU variants into the feed-forward layers offers a novel approach to enhancing the model's representational power.
 
 ## Paper Overview
-The core problem addressed in this paper is the quest for architectural improvements that can lead to better model performance without significatly increasing computational cost or complexity. The approach taken by the author involves integrating GLUs (Gated Linear Units) variants into the transformer architechture. GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
+The core problem addressed in this paper is the quest for architectural improvements that can lead to better model performance without significatly increasing computational cost or complexity. The approach taken by the author involves integrating GLUs (Gated Linear Units) variants into the transformer architechture. 
 
 ## Overview of GLUs and Variants
+
+> [!CAUTION]
+> **Concerns around automation in oversight**<br>
+> Can AI provide reliable self-critique / evaluation? How to improve the robustness and trustworthiness of AI decision making in the training process?
+
+<details>
+  <summary>🤔</summary>
+  
+  * Use **chain-of-thought prompting** to make AI decision making more explicit during training
+  * [Self-consistency](https://arxiv.org/abs/2203.11171) (cf. ensemble classifier)
+
+What is Gated Linear Units:
+
+GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
 
 **GLU**:
 $$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
 
-Bilinear:
+**Bilinear**:
 $$\text{Bilinear}(x, W, V, b, c) = (xW + b) \otimes (xV + c)$$
 
-ReGLU:
+**ReGLU**:
 $$\text{ReGLU}(x, W, V, b, c) = \max(0, xW + b) \otimes (xV + c)$$
 
-GEGLU:
+**GEGLU**:
 $$\text{GEGLU}(x, W, V, b, c) = \text{GELU}(xW + b) \otimes (xV + c)$$
 
-SwiGLU:
+**SwiGLU**:
 $$\text{SwiGLU}(x, W, V, b, c, \beta) = \text{Swish}_\beta(xW + b) \otimes (xV + c)$$
 
 The additional variations on the transformer feed-forward network layer which use GLU or one of its variants in place of the first linear transformation and the activation function. The bias term is ommited in this paper.
 
-FFNGLU:
+**FFN_GLU**:
 $$\text{FFNGLU}(x, W, V, W_2) = (\sigma(xW) \otimes xV)W_2$$
 
-FFNBilinear:
+**FFN_Bilinear**:
 $$\text{FFNBilinear}(x, W, V, W_2) = (xW \otimes xV)W_2$$
 
-FFNReGLU:
+**FFN_ReGLU**:
 $$\text{FFNReGLU}(x, W, V, W_2) = (\max(0, xW) \otimes xV)W_2$$
 
-FFNGEGLU:
+**FFN_GEGLU**:
 $$\text{FFNGEGLU}(x, W, V, W_2) = (\text{GELU}(xW) \otimes xV)W_2$$
 
-FFNSwiGLU:
+**FFN_SwiGLU**:
 $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
+
+## Perplexity Result
+![alt text](image.png)
+
+## Citation
+
+Shazeer, N. (2020b, February 12). GLU variants improve transformer. arXiv.org. https://arxiv.org/abs/2002.05202
+
+## Useful links
+Annotated Paper Implemenatation Notebook: https://nn.labml.ai/transformers/glu_variants/simple.html
+
+Original code base: https://arxiv.org/pdf/1910.10683.pdf
 
 
 
