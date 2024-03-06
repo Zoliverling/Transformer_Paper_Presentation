@@ -55,6 +55,16 @@ $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 ## Perplexity Result
 ![alt text](image.png)
 
+## Fine-tuning
+
+fully-trained models undergo a fine-tuning process on a meticulously constructed dataset amalgamating the Stanford Question-Answering Dataset (SQuAD) and all tasks encompassed within the GLUE and SuperGLUE benchmarks, ensuring a comprehensive exposure to a spectrum of natural language understanding challenges. This fine-tuning regimen, consisting of 131,072 steps employing a learning rate of 10^-3, is meticulously designed to refine the model's performance. Each training step processes input sequences aggregating approximately 65,536 tokens, a strategic choice aimed at optimizing the model's contextual learning capabilities. Adhering to practices established by Raffel et al., 2019, a dropout rate of 0.1 is applied to various components including layer outputs, feed-forward hidden layers, and attention weights, to mitigate overfitting risks by promoting the learning of more generalized representations. Notably, the embedding matrices remain unaltered during the fine-tuning phase, a decision that underscores a focus on enhancing the model's higher-level understanding without modifying the foundational token representations acquired during the pre-training phase. This holistic approach to fine-tuning is indicative of a rigorous attempt to bolster the model's adeptness across a diverse array of language understanding tasks, underlining the depth and precision of the optimization strategies employed.
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
 ## Pratical Benefits
 
 The conclusion statement from the paper suggests that the GLU variants, when integrated into Transformer models, yield improved performance on various language understanding tasks. The practical applications of these findings are quite extensive, particularly in the field of Natural Language Processing (NLP), which involves teaching machines to understand, interpret, and generate human language. Here are some practical usages of such improvements:
