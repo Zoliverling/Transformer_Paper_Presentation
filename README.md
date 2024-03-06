@@ -44,7 +44,7 @@ $$\text{FFNGLU}(x, W, V, W_2) = (\sigma(xW) \otimes xV)W_2$$
 $$\text{FFNBilinear}(x, W, V, W_2) = (xW \otimes xV)W_2$$
 
 **FFN_ReGLU**:
-$$\text{FFN_ReGLU}(x, W, V, W_2) = (\max(0, xW) \otimes xV)W_2$$
+$$\text{FFNReGLU}(x, W, V, W_2) = (\max(0, xW) \otimes xV)W_2$$
 
 **FFN_GEGLU**:
 $$\text{FFNGEGLU}(x, W, V, W_2) = (\text{GELU}(xW) \otimes xV)W_2$$
