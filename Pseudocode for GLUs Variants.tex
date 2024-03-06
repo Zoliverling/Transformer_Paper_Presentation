@@ -19,8 +19,8 @@
 \State Hyperparameters: $N$, the number of layers; $d_{\text{model}}$, the dimensionality of token embeddings; $d_{\text{ff}}$, the dimensionality of the feedforward layer; $h$, the number of attention heads.
 
 \State Parameters $\theta$ include all following parameters:
-\State \hspace{\algorithmicindent} $E \in \mathbb{R}^{d_{\text{vocab}} \times d_{\text{model}}}$, the token embedding matrix.
-\State \hspace{\algorithmicindent} $PE \in \mathbb{R}^{\text{max\_position} \times d_{\text{model}}}$, the positional embedding matrix.
+\State \hspace{\algorithmicindent} $W_e \in \mathbb{R}^{d_{\text{vocab}} \times d_{\text{model}}}$, the token embedding matrix.
+\State \hspace{\algorithmicindent} $W_p \in \mathbb{R}^{\text{max\_position} \times d_{\text{model}}}$, the positional embedding matrix.
 \State \hspace{\algorithmicindent} For each layer $l \in [1...N]$:
 \State \hspace{\algorithmicindent}\hspace{\algorithmicindent} $W_Q^l, W_K^l, W_V^l \in \mathbb{R}^{d_{\text{model}} \times (d_{\text{model}}/h)}$, attention parameter matrices for each head.
 \State \hspace{\algorithmicindent}\hspace{\algorithmicindent} $W_O^l \in \mathbb{R}^{(d_{\text{model}}/h) \times d_{\text{model}}}$, output projection matrix for multi-head attention.
@@ -31,7 +31,7 @@
 \State \hspace{\algorithmicindent} $W_u \in \mathbb{R}^{d_{\text{model}} \times d_{\text{vocab}}}$, the unembedding matrix.
 
 \State Initialize the output sequence $y$ to an empty list.
-\State Compute the embedded input sequence $E_x = E[x] + PE[\text{pos}]$, where $\text{pos}$ is the position sequence.
+\State Compute the embedded input sequence $W_e^x = W_e[x] + W_p[\text{pos}]$, where $\text{pos}$ is the position sequence.
 \For{each layer $l \in [1...N]$}
     \State Apply layer normalization: $X_{\text{norm}} = \text{LayerNorm}(E_x, \gamma^l, \beta^l)$.
     \State Calculate self-attention: $Z = \text{MultiHeadAttention}(X_{\text{norm}}, W_Q^l, W_K^l, W_V^l, W_O^l)$.
