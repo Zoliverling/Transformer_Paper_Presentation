@@ -38,19 +38,19 @@ $$\text{SwiGLU}(x, W, V, b, c, \beta) = \text{Swish}_\beta(xW + b) \otimes (xV +
 The additional variations on the transformer feed-forward network layer which use GLU or one of its variants in place of the first linear transformation and the activation function. The bias term is ommited in this paper.
 
 **FFN_GLU**:
-$$\text{FFNGLU}(x, W, V, W_2) = (\sigma(xW) \otimes xV)W_2$$
+$$\text{FFN_GLU}(x, W, V, W_2) = (\sigma(xW) \otimes xV)W_2$$
 
 **FFN_Bilinear**:
-$$\text{FFNBilinear}(x, W, V, W_2) = (xW \otimes xV)W_2$$
+$$\text{FFN_Bilinear}(x, W, V, W_2) = (xW \otimes xV)W_2$$
 
 **FFN_ReGLU**:
-$$\text{FFNReGLU}(x, W, V, W_2) = (\max(0, xW) \otimes xV)W_2$$
+$$\text{FFN_ReGLU}(x, W, V, W_2) = (\max(0, xW) \otimes xV)W_2$$
 
 **FFN_GEGLU**:
-$$\text{FFNGEGLU}(x, W, V, W_2) = (\text{GELU}(xW) \otimes xV)W_2$$
+$$\text{FFN_GEGLU}(x, W, V, W_2) = (\text{GELU}(xW) \otimes xV)W_2$$
 
 **FFN_SwiGLU**:
-$$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
+$$\text{FFN_SwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 
 ## Perplexity Result
 ![alt text](https://github.com/Zoliverling/Transformer_Paper_Presentation/blob/main/images/image.png)
