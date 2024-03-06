@@ -18,7 +18,7 @@ Gated Linear Units (GLUs) are elements within neural networks designed to better
 
   </details><br>
 
-The GLU Variants utilize the similar machanism to control the flow of information by using different non-linear (or even linear) functions in place of sigmoid.
+The GLU Variants utilize the similar machanism to control the flow of information by using different non-linear functions in place of sigmoid.
 
 **GLU**:
 $$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
