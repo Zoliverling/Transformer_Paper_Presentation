@@ -11,20 +11,14 @@ The core problem addressed in this paper is the quest for architectural improvem
 
 ## Overview of GLUs and Variants
 
-> [!CAUTION]
-> **Concerns around automation in oversight**<br>
-> Can AI provide reliable self-critique / evaluation? How to improve the robustness and trustworthiness of AI decision making in the training process?
-
 <details>
-  <summary>What is GLUs (Gated Linear Units)?</summary>
+  <summary>What are GLUs (Gated Linear Units)?</summary>
   
 GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
 
   </details><br>
 
-What is Gated Linear Units:
-
-GLUs are a type of neural network component that controls the flow of information through the network by applying a gating mechanism to linear units. This gating mechanism allows the model to learn which parts of the information to pass through and which to block, potentially leading to more efficient learning process.
+The GLU Variants utilize the similar machanism to control the flow of information with different activation function.
 
 **GLU**:
 $$\text{GLU}(x, W, V, b, c) = \sigma(xW + b) \otimes (xV + c)$$
@@ -60,6 +54,25 @@ $$\text{FFNSwiGLU}(x, W, V, W_2) = (\text{Swish}_1(xW) \otimes xV)W_2$$
 
 ## Perplexity Result
 ![alt text](image.png)
+
+## Pratical Benefits
+
+The conclusion statement from the paper suggests that the GLU variants, when integrated into Transformer models, yield improved performance on various language understanding tasks. The practical applications of these findings are quite extensive, particularly in the field of Natural Language Processing (NLP), which involves teaching machines to understand, interpret, and generate human language. Here are some practical usages of such improvements:
+
+**Sentiment Analysis**
+<details>
+Businesses and organizations can utilize these models to better gauge public sentiment from social media posts, reviews, and customer feedback, allowing for more responsive and targeted services.
+</details><br>
+
+**Question Answering Systems**
+<details>
+Improved language models can lead to more accurate and relevant answers in AI-based customer service bots, virtual assistants, and information retrieval systems.
+</details><br>
+
+**Speech Recognition**
+<detials>
+Incorporating these models into speech-to-text applications can result in more accurate transcription, which is beneficial for accessibility technology, legal transcriptions, and more.
+</details><br>
 
 ## Citation
 
