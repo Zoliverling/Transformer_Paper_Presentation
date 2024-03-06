@@ -1,4 +1,4 @@
-# GLU Variants
+# GLUs (Gated Linear Units) Variants Improve Transformer
 Author: Zheling Zhang
 
 Email: zheling.zhang@vanderbilt.edu
