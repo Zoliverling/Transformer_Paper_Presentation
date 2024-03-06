@@ -90,6 +90,26 @@ Code Demo from labml: https://nn.labml.ai/transformers/glu_variants/simple.html
 
 Original code base: https://arxiv.org/pdf/1910.10683.pdf
 
+Reading material of GLU: Yann N. Dauphin, Angela Fan, Michael Auli, and David Grangier. Language modeling with gated convolutional networks. CoRR, abs/1612.08083, 2016. URL http://arxiv.org/abs/1612.08083.
+
+Reading material of ReLU: Xavier Glorot, Antoine Bordes, and Yoshua Bengio. Deep sparse rectifier neural networks. In Proceedings
+of the fourteenth international conference on artificial intelligence and statistics, pages 315–323, 2011.
+
+Reading material of GELU: Dan Hendrycks and Kevin Gimpel. Bridging nonlinearities and stochastic regularizers with gaussian error
+linear units. CoRR, abs/1606.08415, 2016. URL http://arxiv.org/abs/1606.08415.
+
+Reading material of Bilinear: Andriy Mnih and Geoffrey Hinton. Three new graphical models for statistical language modelling. In
+Proceedings of the 24th international conference on Machine learning, pages 641–648, 2007.
+
+Reading material of Swish: Prajit Ramachandran, Barret Zoph, and Quoc V Le. Searching for activation functions. arXiv preprint
+arXiv:1710.05941, 2017.
+
+
+
+
+
+
+
 
 
 
